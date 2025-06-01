@@ -1,0 +1,314 @@
+$color-white: #FFFFFF;
+$color-grey-900: #48556A;
+$color-grey-500: #6E8098;
+$color-grey-400: #9DAEC2;
+$color-grey-200: #ECF2F8;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$font-size-20: 2rem;
+$font-size-13: 1.3rem;
+$line-height-130: 1.3;
+$line-height-140: 1.4;
+$letter-spacing-025: 0.25px;
+$letter-spacing-012: 0.12px;
+$letter-spacing-25: 25px;
+$space-0: 0px;
+$space-10: 10px;
+$space-16: 16px;
+$space-24: 24px;
+$space-32: 32px;
+$space-40: 40px;
+$space-48: 48px;
+$space-64: 64px;
+
+@mixin text-preset-1() {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-20;
+    line-height: $line-height-130;
+    letter-spacing: $letter-spacing-025;
+}
+
+@mixin text-preset-2() {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-13;
+    line-height: $line-height-140;
+    letter-spacing: $letter-spacing-012;
+}
+
+@mixin text-preset-2-bold() {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-13;
+    line-height: $line-height-140;
+    letter-spacing: $letter-spacing-012;
+}
+
+@mixin text-preset-3() {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-13;
+    line-height: $line-height-140;
+    letter-spacing: $letter-spacing-025;
+}
+
+@mixin tablet {
+    @media screen and (min-width: 48em) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 64em) {
+        @content;
+    }
+}
+
+
+@mixin flexbox($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: red;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: $color-white;
+    width: 327px;
+    height: 538px;
+    @include flexbox(column, $space-32);
+    border-radius: $space-10;
+    position: relative;
+    container-type: inline-size;
+
+
+    @include tablet() {
+        position: unset;
+        width: 608px;
+        height: 346px;
+        flex-direction: row;
+    }
+
+    @include desktop() {
+        width: 730px;
+        height: 280px;
+        gap: $space-40;
+    }
+
+    &__img {
+        width: 327px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: $space-10 $space-10 0 0;
+        container-type: inline-size;
+
+        @include tablet() {
+            width: 229px;
+            height: 346px;
+            flex-shrink: 0;
+            border-radius: $space-10 0 0 $space-10;
+        }
+
+        @include desktop() {
+            width: 285px;
+            height: 280px;
+        }
+
+        img {
+            width: 327px;
+            height: 200px;
+            object-fit: cover;
+            object-position: 0px -244px;
+
+            @include tablet() {
+                width: 281px;
+                height: 647px;
+                object-fit: unset;
+                object-position: 0px -301.51px;
+            }
+
+            @include desktop() {
+                width: 350px;
+                height: 524px;
+                object-position: 0px -244px;
+            }
+        }
+    }
+
+    &__section {
+        width: 267px;
+        margin: 0 auto;
+        @include flexbox(column, $space-48);
+
+        @include tablet() {
+            width: 311px;
+            gap: 24px;
+            margin: auto 0;
+        }
+
+        @include desktop() {
+            width: 365px;
+        }
+    }
+
+    &__text {
+        @include flexbox(column, $space-24);
+
+        h1 {
+            @include text-preset-1();
+            color: $color-grey-900
+        }
+
+        p {
+            @include text-preset-2();
+            color: $color-grey-500;
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__profile {
+        @include flexbox(row, $space-16);
+
+        h2 {
+            @include text-preset-2-bold();
+            color: $color-grey-900;
+        }
+
+        p {
+            @include text-preset-2();
+            color: $color-grey-400
+        }
+    }
+
+    &__social {
+        @include tablet() {
+            position: relative;
+        }
+    }
+
+    .container__button-group {
+        width: $space-32;
+        height: $space-32;
+        border-radius: 50%;
+        background-color: $color-grey-200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-style: none;
+
+        svg {
+            fill: currentColor;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        color: $color-grey-500;
+    }
+
+    .container__button-group:hover {
+        background-color: $color-grey-500;
+
+        svg path {
+            fill: $color-white;
+        }
+    }
+
+    &__share {
+        position: absolute;
+        border-radius: 0 0 $space-10 $space-10;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: $space-16 $space-32;
+        background-color: $color-grey-900;
+        @include flexbox(row, $space-64);
+        align-items: center;
+        color: $color-grey-400;
+        @include text-preset-3();
+
+        @include tablet() {
+            padding: 18px 38px;
+            width: 234px;
+            height: 55px;
+            border-radius: $space-10;
+            bottom: 150%;
+            transform: translateX(-44%);
+            gap: 0;
+        }
+
+        .container__text {
+            @include flexbox(row, $space-24);
+        }
+
+        .container__icons {
+            @include flexbox(row, $space-16);
+        }
+    }
+
+    &__button {
+        width: $space-32;
+        height: $space-32;
+        border-radius: 50%;
+        background-color: $color-grey-200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-style: none;
+
+        svg {
+            fill: currentColor;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        color: $color-grey-500;
+
+        @include tablet() {
+            display: none;
+        }
+    }
+
+    .share__popup::after {
+        @include tablet() {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid $color-grey-900;
+
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+
+}
+
+.invisible {
+    display: none;
+}
