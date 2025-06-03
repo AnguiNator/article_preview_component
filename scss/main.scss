@@ -12,15 +12,15 @@ $line-height-130: 1.3;
 $line-height-140: 1.4;
 $letter-spacing-025: 0.25px;
 $letter-spacing-012: 0.12px;
-$letter-spacing-25: 25px;
+$letter-spacing-25: 2.5rem;
 $space-0: 0px;
-$space-10: 10px;
-$space-16: 16px;
-$space-24: 24px;
-$space-32: 32px;
-$space-40: 40px;
-$space-48: 48px;
-$space-64: 64px;
+$space-10: 1rem;
+$space-16: 1.6rem;
+$space-24: 2.4rem;
+$space-32: 3.2rem;
+$space-40: 4rem;
+$space-48: 4.8rem;
+$space-64: 6.4rem;
 
 @mixin text-preset-1() {
     font-weight: $font-weight-bold;
@@ -79,6 +79,7 @@ $space-64: 64px;
 html {
     font-family: "Manrope", sans-serif;
     font-size: 62.5%;
+
 }
 
 body {
@@ -91,8 +92,8 @@ body {
 
 .container {
     background-color: $color-white;
-    width: 327px;
-    height: 538px;
+    width: 32.7rem;
+    height: 53.8rem;
     @include flexbox(column, $space-32);
     border-radius: $space-10;
     position: relative;
@@ -101,70 +102,70 @@ body {
 
     @include tablet() {
         position: unset;
-        width: 608px;
-        height: 346px;
+        width: 60.8rem;
+        height: 34.6rem;
         flex-direction: row;
     }
 
     @include desktop() {
-        width: 730px;
-        height: 280px;
+        width: 73rem;
+        height: 28rem;
         gap: $space-40;
     }
 
     &__img {
-        width: 327px;
-        height: 200px;
+        width: 32.7rem;
+        height: 20rem;
         overflow: hidden;
         border-radius: $space-10 $space-10 0 0;
         container-type: inline-size;
 
         @include tablet() {
-            width: 229px;
-            height: 346px;
+            width: 22.9rem;
+            height: 34.6rem;
             flex-shrink: 0;
             border-radius: $space-10 0 0 $space-10;
         }
 
         @include desktop() {
-            width: 285px;
-            height: 280px;
+            width: 28.5rem;
+            height: 28rem;
         }
 
         img {
-            width: 327px;
-            height: 200px;
+            width: 32.7rem;
+            height: 20rem;
             object-fit: cover;
-            object-position: 0px -244px;
+            object-position: 0rem -24.4rem;
 
             @include tablet() {
-                width: 281px;
-                height: 647px;
+                width: 28.1rem;
+                height: 64.7rem;
                 object-fit: unset;
-                object-position: 0px -301.51px;
+                object-position: 0rem -30.151rem;
             }
 
             @include desktop() {
-                width: 350px;
-                height: 524px;
-                object-position: 0px -244px;
+                width: 35rem;
+                height: 52.4rem;
+                object-position: 0rem -24.4rem;
             }
         }
     }
 
     &__section {
-        width: 267px;
+        width: 26.7rem;
         margin: 0 auto;
         @include flexbox(column, $space-48);
 
         @include tablet() {
-            width: 311px;
-            gap: 24px;
+            width: 31.1rem;
+            gap: $space-24;
             margin: auto 0;
         }
 
         @include desktop() {
-            width: 365px;
+            width: 36.5rem;
         }
     }
 
@@ -249,9 +250,9 @@ body {
         @include text-preset-3();
 
         @include tablet() {
-            padding: 18px 38px;
-            width: 234px;
-            height: 55px;
+            padding: 1.8rem 3.8rem;
+            width: 23.4rem;
+            height: 5.5rem;
             border-radius: $space-10;
             bottom: 150%;
             transform: translateX(-44%);
@@ -296,11 +297,11 @@ body {
             position: absolute;
             width: 0;
             height: 0;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-top: 12px solid $color-grey-900;
+            border-left: 1.2rem solid transparent;
+            border-right: 1.2rem solid transparent;
+            border-top: 1.2rem solid $color-grey-900;
 
-            bottom: -10px;
+            bottom: -1rem;
             left: 50%;
             transform: translateX(-50%);
         }

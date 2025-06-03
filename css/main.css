@@ -19,100 +19,100 @@ body {
 
 .container {
   background-color: #FFFFFF;
-  width: 327px;
-  height: 538px;
+  width: 32.7rem;
+  height: 53.8rem;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  border-radius: 10px;
+  gap: 3.2rem;
+  border-radius: 1rem;
   position: relative;
   container-type: inline-size;
 }
 @media screen and (min-width: 48em) {
   .container {
     position: unset;
-    width: 608px;
-    height: 346px;
+    width: 60.8rem;
+    height: 34.6rem;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 64em) {
   .container {
-    width: 730px;
-    height: 280px;
-    gap: 40px;
+    width: 73rem;
+    height: 28rem;
+    gap: 4rem;
   }
 }
 .container__img {
-  width: 327px;
-  height: 200px;
+  width: 32.7rem;
+  height: 20rem;
   overflow: hidden;
-  border-radius: 10px 10px 0 0;
+  border-radius: 1rem 1rem 0 0;
   container-type: inline-size;
 }
 @media screen and (min-width: 48em) {
   .container__img {
-    width: 229px;
-    height: 346px;
+    width: 22.9rem;
+    height: 34.6rem;
     flex-shrink: 0;
-    border-radius: 10px 0 0 10px;
+    border-radius: 1rem 0 0 1rem;
   }
 }
 @media screen and (min-width: 64em) {
   .container__img {
-    width: 285px;
-    height: 280px;
+    width: 28.5rem;
+    height: 28rem;
   }
 }
 .container__img img {
-  width: 327px;
-  height: 200px;
+  width: 32.7rem;
+  height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0px -244px;
-     object-position: 0px -244px;
+  -o-object-position: 0rem -24.4rem;
+     object-position: 0rem -24.4rem;
 }
 @media screen and (min-width: 48em) {
   .container__img img {
-    width: 281px;
-    height: 647px;
+    width: 28.1rem;
+    height: 64.7rem;
     -o-object-fit: unset;
        object-fit: unset;
-    -o-object-position: 0px -301.51px;
-       object-position: 0px -301.51px;
+    -o-object-position: 0rem -30.151rem;
+       object-position: 0rem -30.151rem;
   }
 }
 @media screen and (min-width: 64em) {
   .container__img img {
-    width: 350px;
-    height: 524px;
-    -o-object-position: 0px -244px;
-       object-position: 0px -244px;
+    width: 35rem;
+    height: 52.4rem;
+    -o-object-position: 0rem -24.4rem;
+       object-position: 0rem -24.4rem;
   }
 }
 .container__section {
-  width: 267px;
+  width: 26.7rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 4.8rem;
 }
 @media screen and (min-width: 48em) {
   .container__section {
-    width: 311px;
-    gap: 24px;
+    width: 31.1rem;
+    gap: 2.4rem;
     margin: auto 0;
   }
 }
 @media screen and (min-width: 64em) {
   .container__section {
-    width: 365px;
+    width: 36.5rem;
   }
 }
 .container__text {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 2.4rem;
 }
 .container__text h1 {
   font-weight: 700;
@@ -136,7 +136,7 @@ body {
 .container__profile {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 1.6rem;
 }
 .container__profile h2 {
   font-weight: 700;
@@ -158,8 +158,8 @@ body {
   }
 }
 .container .container__button-group {
-  width: 32px;
-  height: 32px;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
   background-color: #ECF2F8;
   display: flex;
@@ -181,15 +181,15 @@ body {
 }
 .container__share {
   position: absolute;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 1rem 1rem;
   width: 100%;
   left: 0;
   bottom: 0;
-  padding: 16px 32px;
+  padding: 1.6rem 3.2rem;
   background-color: #48556A;
   display: flex;
   flex-direction: row;
-  gap: 64px;
+  gap: 6.4rem;
   align-items: center;
   color: #9DAEC2;
   font-weight: 400;
@@ -199,10 +199,10 @@ body {
 }
 @media screen and (min-width: 48em) {
   .container__share {
-    padding: 18px 38px;
-    width: 234px;
-    height: 55px;
-    border-radius: 10px;
+    padding: 1.8rem 3.8rem;
+    width: 23.4rem;
+    height: 5.5rem;
+    border-radius: 1rem;
     bottom: 150%;
     transform: translateX(-44%);
     gap: 0;
@@ -211,16 +211,16 @@ body {
 .container__share .container__text {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 2.4rem;
 }
 .container__share .container__icons {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 1.6rem;
 }
 .container__button {
-  width: 32px;
-  height: 32px;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
   background-color: #ECF2F8;
   display: flex;
@@ -245,10 +245,10 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 12px solid #48556A;
-    bottom: -10px;
+    border-left: 1.2rem solid transparent;
+    border-right: 1.2rem solid transparent;
+    border-top: 1.2rem solid #48556A;
+    bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
   }
